@@ -8,16 +8,14 @@
     tools:context=".SignUp">
 
     <TextView
-        android:layout_marginTop="120dp"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="Sign Up"
         android:textSize="28sp"
-        android:id="@+id/tv1"
-        android:textColor="#fff"
-        android:textStyle="italic"
-        />
+        android:textStyle="italic" />
     <EditText
         android:textColorHint="#8d000000"
         android:textStyle="italic"
