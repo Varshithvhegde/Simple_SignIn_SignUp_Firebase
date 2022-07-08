@@ -36,17 +36,23 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        //Initialise start
         et_email=(EditText) findViewById(R.id.et_email1);
         et_pass=(EditText)findViewById(R.id.et_password);
         btn_login =(Button)findViewById(R.id.btn_login);
         tv_signup=(TextView)findViewById(R.id.tv_signup);
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
+        //Initialise end
+
         if(firebaseAuth.getCurrentUser() != null )
         {
-
+            //Checks whether the user is already if yes then goes to profile page
             startActivity(new Intent(SignIn.this,MainActivity.class));
         }
+
+        //If user doesnot have account he can go to register activity
         tv_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +62,7 @@ public class SignIn extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //local validation
                 email = et_email.getText().toString().trim();
                 password = et_pass.getText().toString().trim();
                 if(email.isEmpty() || password.isEmpty())
@@ -89,6 +96,7 @@ public class SignIn extends AppCompatActivity {
         });
     }
 
+    //checking whether given email and password is matching with database
     private void checkuserexist() {
         databaseReference = FirebaseDatabase.getInstance().getReference().child("user info");
         final FirebaseUser user = firebaseAuth.getCurrentUser();

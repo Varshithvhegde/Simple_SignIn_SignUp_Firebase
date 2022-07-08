@@ -29,27 +29,34 @@ public class SignUp extends AppCompatActivity {
     Button btn_signup;
     String fullname,email,pass,uid,gender;
     ProgressDialog progressDialog;
-    TextView tv_resend;
+
     DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        //declaration start
         et_email=(EditText)findViewById(R.id.et_email);
         et_fullname =(EditText)findViewById(R.id.et_fullname);
         et_password=(EditText)findViewById(R.id.et_password);
         et_uid=(EditText)findViewById(R.id.et_uid);
         btn_signup=(Button)findViewById(R.id.btn_signup);
-
         final RadioButton btn_male = (RadioButton)findViewById(R.id.rbtn_male);
         final RadioButton btn_female = (RadioButton)findViewById(R.id.rbtn_female);
+        //declaration end
+
+        //creating firebase instace
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        //getting users from database   with child name "user info"
         databaseReference = FirebaseDatabase.getInstance().getReference().child("user info");
+
+        //initialized to get popup loading screen....
         progressDialog = new ProgressDialog(this);
 
+        //validating the given details locally
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +84,7 @@ public class SignUp extends AppCompatActivity {
 
     public void insert_user_info(final String email1, final String pass1)
     {
+        //gives loading popup
         progressDialog.setMessage("registering user");
         progressDialog.show();
         firebaseAuth.createUserWithEmailAndPassword(email1 , pass1 ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -130,7 +138,7 @@ public class SignUp extends AppCompatActivity {
                     }
                 });
             }
-
+//You can use this code if you want to use email verification
 //            private void checkEmailVerification(final FirebaseUser user) {
 //                FirebaseUser fuser = firebaseAuth.getCurrentUser();
 //
