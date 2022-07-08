@@ -42,7 +42,7 @@ public class SignUp extends AppCompatActivity {
         et_password=(EditText)findViewById(R.id.et_password);
         et_uid=(EditText)findViewById(R.id.et_uid);
         btn_signup=(Button)findViewById(R.id.btn_signup);
-        tv_resend= findViewById(R.id.tv_resend);
+
         final RadioButton btn_male = (RadioButton)findViewById(R.id.rbtn_male);
         final RadioButton btn_female = (RadioButton)findViewById(R.id.rbtn_female);
         firebaseAuth = FirebaseAuth.getInstance();

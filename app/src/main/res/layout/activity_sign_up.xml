@@ -117,16 +117,7 @@
 
         android:textSize="22sp"
         android:textStyle="italic" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_signup"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:textStyle="italic"
-        android:textColor="#fff"
-        android:textSize="22sp"
-        android:id="@+id/tv_resend"
-        android:text="Resend code?"/>
+
+
 
 </RelativeLayout>
