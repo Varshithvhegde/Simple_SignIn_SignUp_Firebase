@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:text="Sign IN/Login"
+
+        android:textSize="28sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/et_email1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_welcome"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:hint="   email"
+        android:inputType="textEmailAddress"
+
+        android:paddingLeft="8dp"
+
+        android:textStyle="italic" />
+    <EditText
+        android:paddingLeft="8dp"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="   password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:textStyle="italic"
+
+        android:layout_below="@+id/et_email1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/et_password"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_below="@id/et_password"
+        android:layout_marginTop="10dp"
+
+        android:textColor="#ffff"
+        android:id="@+id/btn_login"
+        android:layout_alignLeft="@+id/et_password"
+        />
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User? Sign Up Here"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        />
+
+</RelativeLayout>
