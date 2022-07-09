@@ -26,7 +26,12 @@ Select Android as shown in the below image  <br><br><br>
 ### Step 6
 Register your app  
 - Get your package name from android studio and add in the first text input box
-- Add SHA1 key from android stdio (To knowhow to get the key please refer [this](https://stackoverflow.com/questions/27609442/how-to-get-the-sha-1-fingerprint-certificate-in-android-studio-for-debug-mode))
+- Add SHA1 certificate from android stdio (To know how to get the Debug signing certificate please refer [this](https://stackoverflow.com/questions/27609442/how-to-get-the-sha-1-fingerprint-certificate-in-android-studio-for-debug-mode))
+
+
+
+<br><br>
+# Continued.................
 
 
 
