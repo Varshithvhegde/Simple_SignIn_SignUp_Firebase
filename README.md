@@ -31,7 +31,7 @@ Register your app
 
 
 <br><br>
-# Continued.................
+# Continued....................
 
 
 
