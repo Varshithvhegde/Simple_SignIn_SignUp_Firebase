@@ -107,7 +107,7 @@ Switch to the Project view in Android Studio to see your project root directory.
 
 
 <br><br>
-# Continued....................
+
 
 
 
